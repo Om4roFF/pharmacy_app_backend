@@ -1,0 +1,12 @@
+version: '3'
+services:
+  db:
+    image: postgres:12
+    ports:
+      - 32700:5432
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: jango
+      POSTGRES_DB: pharmacy
